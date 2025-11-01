@@ -1,0 +1,198 @@
+@import "tailwindcss";
+@import "@fontsource/poppins/index.css";
+
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.bg-gradient-animate {
+  background: linear-gradient(var(--angle),
+      rgba(11, 19, 43, 1) 0%,
+      rgba(28, 37, 65, 1) 50%,
+      rgba(58, 80, 107, 1) 100%);
+  background: -webkit-linear-gradient(var(--angle),
+      rgba(11, 19, 43, 1) 0%,
+      rgba(28, 37, 65, 1) 50%,
+      rgba(58, 80, 107, 1) 100%);
+  animation: gradient-rotate 24s linear infinite;
+}
+
+@keyframes gradient-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+:root {
+  --twinkle-duration: 5s;
+}
+
+.stars-wrapper {
+  position: relative;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+}
+
+.stars:nth-child(2) {
+  animation-delay: calc(var(--twinkle-duration) * -0.33);
+}
+
+.stars:nth-child(3) {
+  animation-delay: calc(var(--twinkle-duration) * -0.66);
+}
+
+@keyframes twinkle {
+  25% {
+    opacity: 0;
+  }
+}
+
+.star {
+  fill: #C2FFF6;
+}
+
+.star:nth-child(3n) {
+  opacity: 0.8;
+}
+
+.star:nth-child(7n) {
+  opacity: 0.6;
+}
+
+.star:nth-child(13n) {
+  opacity: 0.4;
+}
+
+.star:nth-child(19n) {
+  opacity: 0.2;
+}
+
+/* comets */
+.comet {
+  transform-origin: center center;
+  animation: comet 30s linear infinite;
+}
+
+@keyframes comet {
+
+  0%,
+  40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60%,
+  100% {
+    transform: translateX(-110vmax);
+    opacity: 0;
+  }
+}
+
+.comet-1 {
+  animation-delay: 0s;
+}
+
+.comet-2 {
+  animation-delay: -5s;
+}
+
+.comet-3 {
+  animation-delay: -10s;
+}
+
+.comet-4 {
+  animation-delay: -15s;
+}
+
+.comet-5 {
+  animation-delay: -20s;
+}
+
+.comet-6 {
+  animation-delay: -25s;
+}
+
+.comet-7 {
+  animation-delay: -30s;
+}
+
+.comet-8 {
+  animation-delay: -3s;
+}
+
+.comet-9 {
+  animation-delay: -6s;
+}
+
+.comet-10 {
+  animation-delay: -9s;
+}
+
+.comet-11 {
+  animation-delay: -12s;
+}
+
+.comet-12 {
+  animation-delay: -21s;
+}
+
+.comet-13 {
+  animation-delay: -18s;
+}
+
+.comet-14 {
+  animation-delay: -23s;
+}
+
+.comet-15 {
+  animation-delay: -26s;
+}
+
+.comet-16 {
+  animation-delay: -29s;
+}
+
+.comet-17 {
+  animation-delay: -2s;
+}
+
+.comet-18 {
+  animation-delay: -4s;
+}
+
+.comet-19 {
+  animation-delay: -7s;
+}
+
+.comet-20 {
+  animation-delay: -14s;
+}
+
+.comet-22 {
+  animation-delay: -19s;
+}
