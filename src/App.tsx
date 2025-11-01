@@ -56,7 +56,7 @@ function App() {
       />
       <Stars showStars={stars} showComets={comets} />
       <div className="fixed top-2 left-2 z-50 flex items-center gap-2">
-        <img src="/favicon.svg" alt="" className="w-auto h-[40px]" />
+        <img src="favicon.svg" alt="" className="w-auto h-[40px]" />
         <h1 className="text-sm text-white">Celestial Canvas</h1>
       </div>
       <Toolbar
